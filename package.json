@@ -1,6 +1,6 @@
 {
   "name": "shijingsh-teaset",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A UI library for react native.",
   "main": "index.js",
   "scripts": {
