@@ -11,7 +11,7 @@ import PullPicker from '../PullPicker/PullPicker';
 import PopoverPicker from '../PopoverPicker/PopoverPicker';
 
 export default class Select extends Component {
-  
+
   static propTypes = {
     ...TouchableOpacity.propTypes,
     size: PropTypes.oneOf(['lg', 'md', 'sm']),
@@ -51,11 +51,11 @@ export default class Select extends Component {
     if (items instanceof Array) {
       if (getItemValue) {
         for (let i = 0; i < items.length; ++i) {
-          if (getItemValue(items[i], i) === value) return i;
+          if (getItemValue(items[i], i) == value) return i;
         }
       } else {
         for (let i = 0; i < items.length; ++i) {
-          if (items[i] === value) return i;
+          if (items[i] == value) return i;
         }
       }
     }
@@ -68,14 +68,14 @@ export default class Select extends Component {
     if (getItemText && items instanceof Array) {
       if (getItemValue) {
         for (let i = 0; i < items.length; ++i) {
-          if (getItemValue(items[i], i) === value) {
+          if (getItemValue(items[i], i) == value) {
             text = getItemText(items[i], i);
             break;
           }
         }
       } else {
         for (let i = 0; i < items.length; ++i) {
-          if (items[i] === value) {
+          if (items[i] == value) {
             text = getItemText(items[i], i);
             break;
           }
